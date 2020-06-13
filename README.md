@@ -9,5 +9,5 @@ This repository contains a Homebrew Tap for my tools.
 [prvt](https://github.com/ItalyPaleAle/prvt) lets you store end-to-end encrypted files and view them in your browser 
 
 ```sh
-brew install italypaleale/homebrew-tap/prvt
+brew install italypaleale/tap/prvt
 ```
