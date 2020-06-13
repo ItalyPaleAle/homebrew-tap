@@ -11,3 +11,11 @@ This repository contains a Homebrew Tap for my tools.
 ```sh
 brew install italypaleale/tap/prvt
 ```
+
+## Hereditas
+
+[Hereditas](https://hereditas.app) is a static site generator for a fully trustless digital legacy box
+
+```sh
+brew install italypaleale/tap/hereditas
+```

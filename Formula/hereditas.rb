@@ -14,6 +14,6 @@ class Hereditas < Formula
   end
 
   test do
-    assert_match /%r{hereditas/0\.2\.1}/, shell_output("#{bin}/hereditas --version")
+    assert_match %r{hereditas/0\.2\.1}, shell_output("#{bin}/hereditas --version")
   end
 end
