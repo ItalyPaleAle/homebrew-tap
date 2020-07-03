@@ -2,7 +2,7 @@ class Prvt < Formula
   desc "Store end-to-end encrypted files and view them in your browser"
   homepage "https://github.com/ItalyPaleAle/prvt"
   url "https://github.com/ItalyPaleAle/prvt/archive/v0.4.2.tar.gz"
-  sha256 "3e9ecefff72bba5f7f7834f442bdd9b6ee953306bbbf0f4bd1ecccaf7af9b09b"
+  sha256 "1c282c6c48a596f64adf0f815eb6185fdecd05e9df4b0a9fc6ab677496099c40"
 
   depends_on "go" => ["1.14", :build]
 
