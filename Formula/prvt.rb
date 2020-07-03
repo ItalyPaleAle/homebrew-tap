@@ -5,13 +5,19 @@ class Prvt < Formula
   sha256 "3e9ecefff72bba5f7f7834f442bdd9b6ee953306bbbf0f4bd1ecccaf7af9b09b"
 
   depends_on "go" => ["1.14", :build]
+  depends_on "node" => ["12", :build]
 
   def install
     ENV["GOPATH"] = buildpath
     ENV["GO111MODULE"] = "on"
     ENV["CGO_ENABLED"] = "0"
+    ENV["APP_VERSION"] = "0.4.1"
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     (buildpath/"src/github.com/ItalyPaleAle/prvt").install buildpath.children
+    cd "src/github.com/ItalyPaleAle/prvt/ui" do
+      system "npm", "ci"
+      system "npm", "run", "build"
+    end
     cd "src/github.com/ItalyPaleAle/prvt" do
       system "go", "build", "-ldflags",
         "-X github.com/ItalyPaleAle/prvt/buildinfo.AppVersion=v0.4.1 " \
