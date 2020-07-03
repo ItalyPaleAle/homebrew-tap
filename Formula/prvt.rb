@@ -22,9 +22,10 @@ class Prvt < Formula
       rm_rf "ui/dist"
       mv "dist", "ui/dist"
       # Fetch packr (the formula on homebrew is broken)
-      system "curl", "-LO",
-        "https://github.com/gobuffalo/packr/releases/download/"\
-        "v2.7.1/packr_2.7.1_darwin_amd64.tar.gz"
+      system "curl", "-L",
+        "https://github.com/gobuffalo/packr/releases/download/" \
+        "v2.7.1/packr_2.7.1_darwin_amd64.tar.gz",
+        "-o packr_2.7.1_darwin_amd64.tar.gz"
       system "tar", "-xvzf packr_2.7.1_darwin_amd64.tar.gz"
       system "packr_2.7.1_darwin_amd64/packr2"
       # Build the app
