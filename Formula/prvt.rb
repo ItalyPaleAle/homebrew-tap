@@ -25,9 +25,9 @@ class Prvt < Formula
       system "curl", "-L",
         "https://github.com/gobuffalo/packr/releases/download/" \
         "v2.7.1/packr_2.7.1_darwin_amd64.tar.gz",
-        "-o packr_2.7.1_darwin_amd64.tar.gz"
-      system "tar", "-xvzf packr_2.7.1_darwin_amd64.tar.gz"
-      system "packr_2.7.1_darwin_amd64/packr2"
+        "-o packr.tar.gz"
+      system "tar", "-xvzf packr.tar.gz", "packr2"
+      system "./packr2"
       # Build the app
       system "go", "build", "-ldflags",
         "-X github.com/ItalyPaleAle/prvt/buildinfo.AppVersion=v0.4.2 " \
