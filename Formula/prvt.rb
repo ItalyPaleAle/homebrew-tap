@@ -20,7 +20,9 @@ class Prvt < Formula
         "-o dist.tar.gz"
       system "tar", "-xzf dist.tar.gz"
       rm_rf "ui/dist"
-      mv "dist", "ui/"
+      mv "dist", "ui/dist"
+      system "ls", "ui/"
+      system "ls", "ui/dist/"
       system "packr"
       system "go", "build", "-ldflags",
         "-X github.com/ItalyPaleAle/prvt/buildinfo.AppVersion=v0.4.2 " \
