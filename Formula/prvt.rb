@@ -19,7 +19,7 @@ class Prvt < Formula
         "v0.4.2/prvt-v0.4.2-ui.tar.gz",
         "-o dist.tar.gz"
       system "tar", "-xzf dist.tar.gz"
-      rm_rf "-rf", "ui/dist"
+      rm_rf "ui/dist"
       mv "dist", "ui/"
       system "packr"
       system "go", "build", "-ldflags",
