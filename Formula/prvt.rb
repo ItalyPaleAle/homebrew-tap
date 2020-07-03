@@ -25,7 +25,7 @@ class Prvt < Formula
       system "go", "build", "-ldflags",
         "-X github.com/ItalyPaleAle/prvt/buildinfo.AppVersion=v0.4.2 " \
         "-X github.com/ItalyPaleAle/prvt/buildinfo.BuildID=0.4.2 " \
-        "-X github.com/ItalyPaleAle/prvt/buildinfo.BuildTime=brew",
+        "-X github.com/ItalyPaleAle/prvt/buildinfo.BuildTime=brew " \
         "-X github.com/ItalyPaleAle/prvt/buildinfo.CommitHash=v0.4.2",
         "-o", bin/"prvt", "."
     end
