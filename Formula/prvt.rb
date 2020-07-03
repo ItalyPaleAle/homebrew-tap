@@ -5,6 +5,7 @@ class Prvt < Formula
   sha256 "1c282c6c48a596f64adf0f815eb6185fdecd05e9df4b0a9fc6ab677496099c40"
 
   depends_on "go" => ["1.14", :build]
+  depends_on "packr" => ["2.7", :build]
 
   def install
     ENV["GOPATH"] = buildpath
@@ -13,10 +14,14 @@ class Prvt < Formula
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     (buildpath/"src/github.com/ItalyPaleAle/prvt").install buildpath.children
     cd "src/github.com/ItalyPaleAle/prvt" do
-      system "curl", "-Ls", "https://github.com/ItalyPaleAle/prvt/releases/download/v0.4.2/prvt-v0.4.2-ui.tar.gz", "-o dist.tar.gz"
+      system "curl", "-L",
+        "https://github.com/ItalyPaleAle/prvt/releases/download/" \
+        "v0.4.2/prvt-v0.4.2-ui.tar.gz",
+        "-o dist.tar.gz"
       system "tar", "-xzf", "dist.tar.gz"
-      system "rm", "-rf", "ui/dist"
-      system "mv", "dist", "ui/"
+      rm_rf "-rf", "ui/dist"
+      mv "dist", "ui/"
+      system "packr"
       system "go", "build", "-ldflags",
         "-X github.com/ItalyPaleAle/prvt/buildinfo.AppVersion=v0.4.2 " \
         "-X github.com/ItalyPaleAle/prvt/buildinfo.BuildID=0.4.2 " \
