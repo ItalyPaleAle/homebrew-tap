@@ -4,7 +4,7 @@ class Prvt < Formula
   url "https://github.com/ItalyPaleAle/prvt/archive/v0.5.0-beta.3.tar.gz"
   sha256 "16e4da3eb38cfdf4894b43f88e72b797b14c1a44595ca71d261a3f2c5f042761"
 
-  depends_on "go" => ["1.14", :build]
+  depends_on "go" => ["1.15", :build]
 
   def install
     ENV["GOPATH"] = buildpath
