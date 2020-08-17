@@ -6,7 +6,7 @@ class Hereditas < Formula
   url "https://registry.npmjs.org/hereditas/-/hereditas-0.2.1.tgz"
   sha256 "e1e1cb375dc55b1e04220b2c2082bf9fc5b257fc8ea11e7db7edfd01afe7f71a"
 
-  depends_on "node" => ["12"]
+  depends_on "node"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
