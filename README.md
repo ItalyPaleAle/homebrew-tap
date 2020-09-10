@@ -6,7 +6,7 @@ This repository contains a Homebrew Tap for my tools.
 
 ## prvt
 
-**[prvt](https://github.com/ItalyPaleAle/prvt):** Personal, end-to-end encrypted storage.
+**[prvt](https://github.com/ItalyPaleAle/prvt):** Personal, end-to-end encrypted storage that works through your browser.
 
 This is only distributed as a Cask.
 
