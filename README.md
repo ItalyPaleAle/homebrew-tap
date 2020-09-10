@@ -6,15 +6,17 @@ This repository contains a Homebrew Tap for my tools.
 
 ## prvt
 
-[prvt](https://github.com/ItalyPaleAle/prvt) lets you store end-to-end encrypted files and view them in your browser 
+**[prvt](https://github.com/ItalyPaleAle/prvt):** Personal, end-to-end encrypted storage.
+
+This is only distributed as a Cask.
 
 ```sh
-brew install italypaleale/tap/prvt
+brew cask install italypaleale/tap/prvt
 ```
 
 ## Hereditas
 
-[Hereditas](https://hereditas.app) is a static site generator for a fully trustless digital legacy box
+**[Hereditas](https://hereditas.app):** A static site generator for a fully trustless digital legacy box.
 
 ```sh
 brew install italypaleale/tap/hereditas
