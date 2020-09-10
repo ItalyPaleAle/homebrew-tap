@@ -16,8 +16,8 @@ cask "prvt" do
   preflight do
     system_command "xattr",
                    args: [
-                           "-dr", "com.apple.quarantine",
-                           "#{staged_path}/prvt-v#{version}-macos/prvt"
+                            "-dr", "com.apple.quarantine",
+                            "#{staged_path}/prvt-v#{version}-macos/prvt"
                          ]
   end
 end
