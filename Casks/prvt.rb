@@ -1,6 +1,6 @@
 cask "prvt" do
-  version "0.5.0"
-  sha256 "a7eff5105fe8e8414cbfb2198109f8e4e8cec0e056fe8208cea0dc750e5632ae"
+  version "0.5.1"
+  sha256 "de507030ce2f8f941303b29339bb797df203ff9bebca11150fee1a80ad0d603c"
 
   url "https://github.com/ItalyPaleAle/prvt/releases/download/v#{version}/prvt-v#{version}-macos.tar.gz"
   appcast "https://github.com/ItalyPaleAle/prvt/releases.atom"
@@ -14,10 +14,11 @@ cask "prvt" do
 
   # Remove the quarantine because the binary isn't signed
   preflight do
-    system_command "xattr",
+    system_command "/usr/bin/xattr",
                    args: [
-                            "-dr", "com.apple.quarantine",
-                            "#{staged_path}/prvt-v#{version}-macos/prvt"
-                         ]
+                     "-dr",
+                     "com.apple.quarantine",
+                     "#{staged_path}/prvt-v#{version}-macos/prvt"
+                   ]
   end
 end
