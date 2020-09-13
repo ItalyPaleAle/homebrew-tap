@@ -18,7 +18,7 @@ cask "prvt" do
                    args: [
                      "-dr",
                      "com.apple.quarantine",
-                     "#{staged_path}/prvt-v#{version}-macos/prvt"
+                     "#{staged_path}/prvt-v#{version}-macos/prvt",
                    ]
   end
 end
